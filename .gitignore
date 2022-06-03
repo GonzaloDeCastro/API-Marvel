@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+##https://gateway.marvel.com:443/v1/public/characters?apikey=d2f74ceaed1589cacec81ceec2c61b9e
+
+
+##Public key Marvel d2f74ceaed1589cacec81ceec2c61b9e
+##Private key Marvel 46315080276586c9f1d1648ce46b3668dd8f2475
+
+## ts:1
+
+## 146315080276586c9f1d1648ce46b3668dd8f2475d2f74ceaed1589cacec81ceec2c61b9e
+
+## hash 871be6448964d9fb153bd9eabb671ff1
