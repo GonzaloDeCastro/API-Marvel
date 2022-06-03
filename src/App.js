@@ -18,6 +18,20 @@ function App() {
 	return (
 		<div className="App">
 			<h1>Marvel</h1>
+			<div className="row row-cols-1 row-cols-md-3 g-4">
+				{character.map((charact) => (
+					<div className="card">
+						<img
+							src={`${charact.thumbnail.path}.${charact.thumbnail.extension}`}
+							className="card-img-top"
+							alt="Hero"
+						/>
+						<div className="card-body">
+							<p className="card-text"></p>
+						</div>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 }
