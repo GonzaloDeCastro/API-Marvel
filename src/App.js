@@ -20,14 +20,17 @@ function App() {
 			<h1>Marvel</h1>
 			<div className="row row-cols-1 row-cols-md-3 g-4">
 				{character.map((charact) => (
-					<div className="card">
-						<img
-							src={`${charact.thumbnail.path}.${charact.thumbnail.extension}`}
-							className="card-img-top"
-							alt="Hero"
-						/>
-						<div className="card-body">
-							<p className="card-text"></p>
+					<div className="col" key={charact.id}>
+						<div className="card" style={{ width: '18rem;' }}>
+							<img
+								src={`${charact.thumbnail.path}.${charact.thumbnail.extension}`}
+								className="card-img-top"
+								style={{ width: '80%' }}
+								alt="Hero"
+							/>
+							<div className="card-body">
+								<p className="card-text">{charact.name}</p>
+							</div>
 						</div>
 					</div>
 				))}
