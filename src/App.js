@@ -10,6 +10,7 @@ const key = 'd2f74ceaed1589cacec81ceec2c61b9e';
 let randomChar = '';
 let wordChars = 'abcdefghijklmnopqrstuvwxyz';
 
+//Character Random
 const generateRandom = (x) => {
 	randomChar = wordChars.charAt(Math.floor(Math.random() * wordChars.length));
 };
