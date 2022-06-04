@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react_admin_dashboard/static/css/main.14574e48.css",
+    "main.js": "/react_admin_dashboard/static/js/main.90abe9d5.js",
+    "static/media/marvel-background.png": "/react_admin_dashboard/static/media/marvel-background.e4cc354520cbe313e715.png",
+    "static/media/marvel-logo.png": "/react_admin_dashboard/static/media/marvel-logo.58b8e3c47bc4eb3fda69.png",
+    "index.html": "/react_admin_dashboard/index.html",
+    "main.14574e48.css.map": "/react_admin_dashboard/static/css/main.14574e48.css.map",
+    "main.90abe9d5.js.map": "/react_admin_dashboard/static/js/main.90abe9d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14574e48.css",
+    "static/js/main.90abe9d5.js"
+  ]
+}
