@@ -7,6 +7,18 @@ import { useState, useEffect } from 'react';
 
 const hash = '871be6448964d9fb153bd9eabb671ff1';
 const key = 'd2f74ceaed1589cacec81ceec2c61b9e';
+let randomChar = '';
+let wordChars = 'abcdefghijklmnopqrstuvwxyz';
+
+function generateRandom(len) {
+	for (let i = 0; i < len; i++) {
+		randomChar += wordChars.charAt(
+			Math.floor(Math.random() * wordChars.length)
+		);
+	}
+}
+
+generateRandom(1);
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -16,7 +28,7 @@ function App() {
 		if (search === '') {
 			axios
 				.get(
-					`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=${key}&hash=${hash}`
+					`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${randomChar}&ts=1&apikey=${key}&hash=${hash}`
 				)
 				.then((res) => {
 					setCharacters(res.data.data.results);

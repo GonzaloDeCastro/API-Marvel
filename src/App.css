@@ -48,6 +48,10 @@ header img {
 	justify-content: center;
 }
 
+.loading {
+	color: #fff;
+	text-align: center;
+}
 .contents {
 	margin: auto;
 	width: 80%;

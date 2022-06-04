@@ -3,7 +3,7 @@ import HeroChar from './HeroChar';
 
 const HeroList = ({ characters, isLoading }) => {
 	return isLoading ? (
-		<h1>Loading</h1>
+		<h1 className="loading">Loading...</h1>
 	) : (
 		<section className="contents">
 			{characters.map((character) => (
