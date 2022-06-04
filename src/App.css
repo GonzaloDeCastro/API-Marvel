@@ -58,9 +58,8 @@ header img {
 	margin: 5px;
 }
 .card-img {
-	width: 500px;
-	height: 300px;
-	object-fit: cover;
+	width: 250px;
+	height: 250px;
 }
 
 .card-text {
@@ -68,6 +67,10 @@ header img {
 }
 .containerInput {
 	text-align: center;
+}
+
+input {
+	width: 40%;
 }
 
 @media (max-width: 800px) {

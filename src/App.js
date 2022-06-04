@@ -13,16 +13,28 @@ function App() {
 	const [isLoading, setLoading] = useState(true);
 	const [search, setSearch] = useState('');
 	useEffect(() => {
-		axios
-			.get(
-				`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=${key}&hash=${hash}`
-			)
-			.then((res) => {
-				setCharacters(res.data.data.results);
-				setLoading(false);
-			})
-			.catch((error) => console.log(error));
-	}, []);
+		if (search === '') {
+			axios
+				.get(
+					`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=${key}&hash=${hash}`
+				)
+				.then((res) => {
+					setCharacters(res.data.data.results);
+					setLoading(false);
+				})
+				.catch((error) => console.log(error));
+		} else {
+			axios
+				.get(
+					`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${search}&ts=1&apikey=${key}&hash=${hash}`
+				)
+				.then((res) => {
+					setCharacters(res.data.data.results);
+					setLoading(false);
+				})
+				.catch((error) => console.log(error));
+		}
+	}, [search]);
 
 	return (
 		<div className="App">

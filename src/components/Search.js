@@ -6,7 +6,7 @@ const Search = ({ search }) => {
 	const [text, setText] = useState('');
 
 	const handleSearch = (e) => {
-		setText(e.target.value);
+		setText(e);
 		search(e);
 	};
 
@@ -16,7 +16,7 @@ const Search = ({ search }) => {
 				type="text"
 				placeholder="Search a Hero"
 				autoFocus
-				onChange={handleSearch}
+				onChange={(e) => handleSearch(e.target.value)}
 				value={text}
 			/>
 			<button className="btn btn-success">
