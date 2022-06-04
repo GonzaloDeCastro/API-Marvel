@@ -1,7 +1,7 @@
-import './App.css';
-import Header from './components/Header';
-import HeroList from './components/HeroList';
-import Search from './components/Search';
+import '../../App.css';
+import Header from './Header';
+import HeroList from './HeroList';
+import Search from './Search';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -28,6 +28,7 @@ function App() {
 				)
 				.then((res) => {
 					setCharacters(res.data.data.results);
+					console.log(res.data.data.results);
 					setLoading(false);
 				})
 				.catch((error) => console.log(error));

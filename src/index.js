@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import CharacterScreen from './components/Characters/CharacterScreen';
+import ComicScreen from './components/Comics/ComicsScreen';
 import 'bootstrap/dist/css/bootstrap.css';
-import { MarvelApp } from './MarvelApp';
+import MarvelApp from './MarvelApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App />
+		<MarvelApp />
 	</React.StrictMode>
 );

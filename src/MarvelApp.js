@@ -1,5 +1,8 @@
 import React from 'react';
+import AppRouter from './routers/AppRouter';
 
-export const MarvelApp = () => {
-	return <div>MarvelApp</div>;
+const MarvelApp = () => {
+	return <AppRouter />;
 };
+
+export default MarvelApp;
