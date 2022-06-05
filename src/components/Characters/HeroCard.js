@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroChar = ({ character }) => {
 	return (
@@ -9,7 +10,10 @@ const HeroChar = ({ character }) => {
 				alt="Hero"
 			/>
 			<div className="card-body">
-				<p className="card-text">{character.name}</p>
+				<p className="card-text">
+					{character.name}
+					<Link to={`/API-Marvel/hero/${character.name}`}> More...</Link>
+				</p>
 			</div>
 		</div>
 	);

@@ -1,5 +1,5 @@
 import '../../App.css';
-import Header from './Header';
+import Header from '../Header';
 import HeroList from './HeroList';
 import Search from './Search';
 import axios from 'axios';
@@ -16,7 +16,7 @@ const generateRandom = (x) => {
 };
 generateRandom(1);
 
-function App() {
+const CharacterScreen = () => {
 	const [characters, setCharacters] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 	const [search, setSearch] = useState('');
@@ -52,6 +52,6 @@ function App() {
 			<HeroList characters={characters} isLoading={isLoading} />
 		</div>
 	);
-}
+};
 
-export default App;
+export default CharacterScreen;

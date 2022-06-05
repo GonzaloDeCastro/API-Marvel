@@ -63,11 +63,16 @@ header img {
 .card {
 	margin: 5px;
 	width: 250px;
-	height: 300px;
+	height: 320px;
 }
+
 .card-img {
 	width: 200px;
 	height: 250px;
+}
+.card-img-comic {
+	width: 250px;
+	height: 300px;
 }
 
 .card-text {

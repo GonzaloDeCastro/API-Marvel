@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroChar from './HeroChar';
+import HeroChar from './HeroCard';
 
 const HeroList = ({ characters, isLoading }) => {
 	return isLoading ? (

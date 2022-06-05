@@ -1,5 +1,5 @@
 import '../../App.css';
-import Header from './Header';
+import Header from '../Header';
 import HeroList from './ComicList';
 import Search from './Search';
 import axios from 'axios';
