@@ -13,7 +13,8 @@ const AppRouter = () => {
 			<Navbar />
 			<Routes>
 				<Route path="/API-Marvel" element={<CharacterScreen />} />
-				<Route path="/API-Marvel/caracters" element={<CharacterScreen />} />
+				<Route path="/API-Marvel/caracters/" element={<CharacterScreen />} />
+				<Route path="/API-Marvel/page/:page" element={<CharacterScreen />} />
 				<Route path="/API-Marvel/comics" element={<ComicsScreen />} />
 				<Route path="/API-Marvel/hero/:heroName" element={<HeroScreen />} />
 
