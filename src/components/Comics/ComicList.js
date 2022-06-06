@@ -1,13 +1,13 @@
 import React from 'react';
-import HeroChar from './ComicTittle';
+import ComicCard from './ComicCard';
 
-const HeroList = ({ characters, isLoading }) => {
+const HeroList = ({ comics, isLoading }) => {
 	return isLoading ? (
 		<h1 className="loading">Loading...</h1>
 	) : (
 		<section className="contents">
-			{characters.map((character) => (
-				<HeroChar key={character.id} character={character} />
+			{comics.map((comic) => (
+				<ComicCard key={comic.id} comic={comic} />
 			))}
 		</section>
 	);

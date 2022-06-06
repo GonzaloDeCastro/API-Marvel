@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const HeroChar = ({ character }) => {
+const HeroCard = ({ character }) => {
 	return (
 		<div className="card">
 			<img
@@ -19,4 +19,4 @@ const HeroChar = ({ character }) => {
 	);
 };
 
-export default HeroChar;
+export default HeroCard;

@@ -56,7 +56,7 @@ header img {
 	margin: auto;
 	width: 80%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
@@ -81,6 +81,10 @@ header img {
 }
 .containerInput {
 	text-align: center;
+}
+
+.card-body {
+	background-color: #fff;
 }
 
 input {

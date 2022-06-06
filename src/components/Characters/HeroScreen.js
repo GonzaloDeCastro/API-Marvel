@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import HeroList from './HeroList';
 import axios from 'axios';
 import Header from '../Header';
+import GetHeroByName from '../helperApi/GetHeroByName';
 
 const hash = '871be6448964d9fb153bd9eabb671ff1';
 const key = 'd2f74ceaed1589cacec81ceec2c61b9e';
@@ -18,20 +18,19 @@ const HeroScreen = () => {
 			)
 			.then((res) => {
 				setCharacters(res.data.data.results);
-				console.log(res.data.data.results);
+				const { results } = res.data.data;
+				console.log(results);
 				setLoading(false);
 			})
 			.catch((error) => console.log(error));
-	}, []);
+	}, [heroName]);
 
-	console.log(heroName);
 	return (
 		<div>
 			<Header />
-			<HeroList characters={characters} isLoading={isLoading} />
+			<GetHeroByName characters={characters} isLoading={isLoading} />
 		</div>
 	);
 };
 
 export default HeroScreen;
-//https://gateway.marvel.com/v1/public/characters?name=Namor&ts=1&apikey=d2f74ceaed1589cacec81ceec2c61b9e&hash=871be6448964d9fb153bd9eabb671ff1

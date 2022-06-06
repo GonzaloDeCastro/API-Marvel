@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroChar from './HeroCard';
+import HeroCard from './HeroCard';
 
 const HeroList = ({ characters, isLoading }) => {
 	return isLoading ? (
@@ -7,7 +7,7 @@ const HeroList = ({ characters, isLoading }) => {
 	) : (
 		<section className="contents">
 			{characters.map((character) => (
-				<HeroChar key={character.id} character={character} />
+				<HeroCard key={character.id} character={character} />
 			))}
 		</section>
 	);
