@@ -12,6 +12,7 @@ const AppRouter = () => {
 		<BrowserRouter>
 			<Navbar />
 			<Routes>
+				<Route path="/" element={<CharacterScreen />} />
 				<Route path="/API-Marvel" element={<CharacterScreen />} />
 				<Route path="/API-Marvel/caracters/" element={<CharacterScreen />} />
 				<Route path="/API-Marvel/page/:page" element={<CharacterScreen />} />
