@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const HeroCard = ({ character }) => {
+const HeroCard = ({ character, page }) => {
 	return (
 		<div className="card">
 			<img
@@ -12,7 +12,12 @@ const HeroCard = ({ character }) => {
 			<div className="card-body">
 				<p className="card-text">
 					{character.name}
-					<Link to={`/API-Marvel/hero/${character.name}`}> More...</Link>
+					<Link
+						to={`/API-Marvel/characters/page/${page}/hero/${character.name}`}
+					>
+						{' '}
+						More...
+					</Link>
 				</p>
 			</div>
 		</div>

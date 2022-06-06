@@ -14,10 +14,16 @@ const AppRouter = () => {
 			<Routes>
 				<Route path="/" element={<CharacterScreen />} />
 				<Route path="/API-Marvel" element={<CharacterScreen />} />
-				<Route path="/API-Marvel/caracters/" element={<CharacterScreen />} />
-				<Route path="/API-Marvel/page/:page" element={<CharacterScreen />} />
+				<Route path="/API-Marvel/characters/" element={<CharacterScreen />} />
+				<Route
+					path="/API-Marvel/characters/page/:page"
+					element={<CharacterScreen />}
+				/>
 				<Route path="/API-Marvel/comics" element={<ComicsScreen />} />
-				<Route path="/API-Marvel/hero/:heroName" element={<HeroScreen />} />
+				<Route
+					path="/API-Marvel/characters/page/:page/hero/:heroName"
+					element={<HeroScreen />}
+				/>
 
 				<Route path="/search" element={<SearchScreen />} />
 			</Routes>

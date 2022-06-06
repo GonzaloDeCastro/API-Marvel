@@ -4,12 +4,12 @@ import HeroList from './HeroList';
 import Search from './Search';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const hash = '871be6448964d9fb153bd9eabb671ff1';
 const key = 'd2f74ceaed1589cacec81ceec2c61b9e';
 let randomChar = '';
 let wordChars = 'abcdefghijklmnoprstuvwxz';
-let page = 0;
 
 const generateRandom = (x) => {
 	randomChar = wordChars.charAt(Math.floor(Math.random() * wordChars.length));
@@ -20,12 +20,13 @@ const CharacterScreen = () => {
 	const [characters, setCharacters] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 	const [search, setSearch] = useState('');
+	const [counter, setCounter] = useState(10);
 
 	useEffect(() => {
 		if (search === '') {
 			axios
 				.get(
-					`https://gateway.marvel.com:443/v1/public/characters?limit=10&nameStartsWith=${randomChar}&ts=1&apikey=${key}&hash=${hash}`
+					`https://gateway.marvel.com:443/v1/public/characters?limit=10&offset=${counter}&nameStartsWith=${randomChar}&ts=1&apikey=${key}&hash=${hash}`
 				)
 				.then((res) => {
 					setCharacters(res.data.data.results);
@@ -44,12 +45,14 @@ const CharacterScreen = () => {
 				})
 				.catch((error) => console.log(error));
 		}
-	}, [search]);
+	}, []);
+
 	const handleNext = () => {
-		page += 10;
+		setCounter(counter + 10);
+
 		axios
 			.get(
-				`https://gateway.marvel.com/v1/public/characters?limit=10&offset=${page}&ts=1&apikey=${key}&hash=${hash}`
+				`https://gateway.marvel.com/v1/public/characters?limit=10&offset=${counter}&ts=1&apikey=${key}&hash=${hash}`
 			)
 			.then((res) => {
 				setCharacters(res.data.data.results);
@@ -57,32 +60,47 @@ const CharacterScreen = () => {
 				setLoading(false);
 			})
 			.catch((error) => console.log(error));
+		console.log('tocó next');
 	};
 
 	const handleBack = () => {
-		if (page >= 20) {
-			page -= 10;
-			axios
-				.get(
-					`https://gateway.marvel.com/v1/public/characters?limit=10&offset=${page}&ts=1&apikey=${key}&hash=${hash}`
-				)
-				.then((res) => {
-					setCharacters(res.data.data.results);
-					console.log(res.data.data.results);
-					setLoading(false);
-				})
-				.catch((error) => console.log(error));
-		}
+		setCounter(counter - 10);
+
+		axios
+			.get(
+				`https://gateway.marvel.com/v1/public/characters?limit=10&offset=${counter}&ts=1&apikey=${key}&hash=${hash}`
+			)
+			.then((res) => {
+				setCharacters(res.data.data.results);
+				console.log(res.data.data.results);
+				setLoading(false);
+			})
+			.catch((error) => console.log(error));
+
+		console.log(counter);
 	};
 
 	return (
 		<div className="App">
 			<Header />
+			<h1>{counter}</h1>
 			<Search search={(s) => setSearch(s)} />
-			<HeroList characters={characters} isLoading={isLoading} />
+			<HeroList characters={characters} isLoading={isLoading} page={counter} />
 			<div className="pages">
-				<button onClick={handleBack}>Back</button>
-				<button onClick={handleNext}>Next</button>
+				<Link
+					onClick={handleBack}
+					to={`/API-Marvel/characters/page/${counter}`}
+					className="butt"
+				>
+					Back
+				</Link>
+				<Link
+					onClick={handleNext}
+					to={`/API-Marvel/characters/page/${counter}`}
+					className="butt"
+				>
+					Next
+				</Link>
 			</div>
 		</div>
 	);

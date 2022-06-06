@@ -98,7 +98,7 @@ header img {
 	padding: 10px;
 }
 
-.pages button {
+.pages .butt {
 	cursor: pointer;
 	border: none;
 	display: flex;
@@ -115,7 +115,7 @@ header img {
 	transition: 0.3s ease all;
 }
 
-.pages button:hover {
+.butt:hover {
 	background: #137c32;
 }
 

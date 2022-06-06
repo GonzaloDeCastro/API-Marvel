@@ -5,7 +5,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
 			<div className="navbar-collapse">
 				<div className="navbar-nav">
-					<NavLink className="nav-item nav-link" to="/API-Marvel/caracters">
+					<NavLink className="nav-item nav-link" to="/API-Marvel/characters">
 						Characters
 					</NavLink>
 
