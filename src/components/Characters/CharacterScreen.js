@@ -45,11 +45,10 @@ const CharacterScreen = () => {
 				})
 				.catch((error) => console.log(error));
 		}
-	}, []);
+	}, [search]);
 
 	const handleNext = () => {
 		setCounter(counter + 10);
-
 		axios
 			.get(
 				`https://gateway.marvel.com/v1/public/characters?limit=10&offset=${counter}&ts=1&apikey=${key}&hash=${hash}`
@@ -83,7 +82,6 @@ const CharacterScreen = () => {
 	return (
 		<div className="App">
 			<Header />
-			<h1>{counter}</h1>
 			<Search search={(s) => setSearch(s)} />
 			<HeroList characters={characters} isLoading={isLoading} page={counter} />
 			<div className="pages">
