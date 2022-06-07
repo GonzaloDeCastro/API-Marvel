@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/API-Marvel/static/css/main.37e22807.css",
-    "main.js": "/API-Marvel/static/js/main.ecf86a45.js",
+    "main.js": "/API-Marvel/static/js/main.7269a1fd.js",
     "static/media/marvel-background.png": "/API-Marvel/static/media/marvel-background.e4cc354520cbe313e715.png",
     "static/media/marvel-logo.png": "/API-Marvel/static/media/marvel-logo.58b8e3c47bc4eb3fda69.png",
     "index.html": "/API-Marvel/index.html",
     "main.37e22807.css.map": "/API-Marvel/static/css/main.37e22807.css.map",
-    "main.ecf86a45.js.map": "/API-Marvel/static/js/main.ecf86a45.js.map"
+    "main.7269a1fd.js.map": "/API-Marvel/static/js/main.7269a1fd.js.map"
   },
   "entrypoints": [
     "static/css/main.37e22807.css",
-    "static/js/main.ecf86a45.js"
+    "static/js/main.7269a1fd.js"
   ]
 }
