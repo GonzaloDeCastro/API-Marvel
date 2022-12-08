@@ -6,7 +6,7 @@
 This project contains all the Marvel heroes. You can browse the different pages or just search for your favorite hero. We also have its comics available.
 
 ## Demo
-If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://api-marvel-2022.herokuapp.com/)
+If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://gonzalodecastro.github.io/API-Marvel/)
 
 
 ## Installation
